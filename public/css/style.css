@@ -1,0 +1,17 @@
+.in-modern {
+    background: rgb(241 241 241);
+    border: none!important;
+    border-left: 15px solid #0f0caf7e!important;
+    border-radius: 3!important;
+}
+.in-modern:hover{
+    background: rgb(241 241 241);
+    border-left: 25px solid #0f0caf7e!important;
+} 
+.login-template{
+
+    background: white;
+    border: 1px solid black;
+    
+
+}
