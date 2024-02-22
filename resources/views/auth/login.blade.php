@@ -9,6 +9,7 @@
     <link href="css/style.css" rel="stylesheet">
     <style>
         body,
+
         html {
             height: 100%;
             width: 100%;
@@ -30,7 +31,7 @@
     </style>
 </head>
 
-<body>
+<body style="background:#060533db!important;">
     <div class="container">
         <div class="login-container row">
             <div class="col me-3" style="border-right:1px solid black; ">
@@ -81,7 +82,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center align-center-center">
-                                <button type="submit" class="btn btn-primary ml-5">Entrar</button>
+                                <button type="submit" class="btn btn-secondary ml-5">Entrar</button>
                                 <script>
                                     urlLogin = '{{ route("login") }}';
                                 </script>

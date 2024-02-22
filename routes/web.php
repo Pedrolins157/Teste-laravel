@@ -7,11 +7,10 @@ Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.auth');
 
 Route::middleware(['auth'])->group(function () {
+   
     Route::get('/', function () {
-        return view('dashboard');
+        return view('dashboard',['user'=>Auth::user()]);
     });
-
-    Route::get('/perfil', [PerfilController::class, 'mostrarPerfil'])->name('perfil');
 
     Route::prefix('produto')->group(function () {
         Route::get('cadastra', function () {
@@ -43,8 +42,10 @@ Route::middleware(['auth'])->group(function () {
             return view('layout/partes/venda/historico-venda');
         })->name('historico.venda');
     });
+
     Route::get('vendas', function () {
         return view('layout/partes/venda/vendas');
     })->name('venda');
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+    
 });

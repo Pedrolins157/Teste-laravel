@@ -39,14 +39,18 @@
                     </ul>
                 </div>
             </ul>
-            <div class="d-flex" role="search">
-                <!-- @if(isset($user) && $user->nome)
-                <span class="mr-2 d-none d-lg-inline small text-light"><b>Olá, Sr(a)   {{ $user->nome }}</b></span>
-                @endif -->
-                <form action="{{ route('logout') }}" method="POST">
-                    @csrf
-                    <button class="btn btn-control btn-danger efeito" type="submit" style="border-radius:13px;">Sair</button>
-                </form>
+            <div class="row">
+                <div class="col d-flex ml-5 x-auto">
+                @if(isset($user) && $user->nome)
+                    <span class="mr-2 d-none d-lg-inline small text-light"><b>Olá, Sr(a)   {{ $user->nome }}</b></span>
+                    @endif
+                </div>
+                <div class="col mr-5" role="search">
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button class="btn btn-control btn-danger efeito" type="submit" style="border-radius:13px;">Sair</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

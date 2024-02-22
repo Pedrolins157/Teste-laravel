@@ -22,6 +22,9 @@
                         </tbody>
                 </table>
         </div>
+        <div class="col">
+          <span  class="text-light valorTotalVenda"></span>
+        </div>
         <div class="form-group">
           <label for="formaPagamento">Forma de Pagamento:</label>
           <select class="form-control" id="formaPagamento">

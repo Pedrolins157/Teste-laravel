@@ -44,10 +44,9 @@ $(document).ready(function () {
         var produtoNome = $('#SelectProduto option:selected').text();
         var precoUnidade = $('#precoUnid').val();
         var valorTotal = $('#valorTotal').text();
-        
+        valorTotal = valorTotal.toString().replace(',','.');
         totalCarrinho =  parseFloat(totalCarrinho) + parseFloat(valorTotal);
         totalCarrinho = totalCarrinho.toFixed(2);
-
 
         $('#valorTotalVenda').html('R$ ' + totalCarrinho.toString().replace('.',','));
         
